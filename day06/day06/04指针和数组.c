@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
-int main04(void)
+int main(void)
 {
 	int a[] = { 1,3,61,34,632,56 };
 	int b[3];
