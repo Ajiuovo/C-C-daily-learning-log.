@@ -5,7 +5,7 @@
 #include <math.h>
 #include <time.h>
 //假定用户写入":wq"终止接收用户输入，将之前的数据保存到文件。
-int main(void)
+int main07(void)
 {
 	char *filename = "test07.txt";
 	FILE* fp = fopen(filename,"a");
