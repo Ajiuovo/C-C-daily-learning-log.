@@ -7,7 +7,7 @@
 
 #include<sys/stat.h>
 #include<sys/types.h>
-int main(void)
+int main06(void)
 {
 	struct stat buf;
 	int ret = stat("test06.txt",&buf);	//传出参数：在函数调用结束时，充当函数返回值
