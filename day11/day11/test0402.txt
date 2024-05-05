@@ -1,0 +1,77 @@
+新建环境
+conda create -n env_name python=2.7
+查看镜像源
+conda config --show channels
+删除镜像源
+conda config --remove-key channels
+查看所有虚拟环境
+conda env list
+删除虚拟环境
+conda env remove --name your_env_name
+迁移虚拟环境
+conda config --append envs_dirs D:\anaconda_backup\envs
+
+换源
+conda config --add channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+conda config --add channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+设置搜索时显示通道地址：
+conda config --set show_channel_urls yes
+查看是否修改好通道：
+conda config --show channels
+恢复默认源
+
+
+查询当前conda镜像源下的cuda版本信息
+conda search cuda
+查看当前conda镜像源下的cudnn版本信息
+conda search cudnn
+
+
+pycharm专业版使用jupyter改内核
+安装内核：python -m ipykernel install --user --name tensor37 --display-name "Python[conda env:tensor37]"
+检查已有内核：jupyter kernelspec list
+删除已有内核：jupyter kernelspec remove python3
+
+
+安装1.13.1tensorflow(python3.6//3.7)
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.13.1
+对应cudatoolkit版本：10.0.130  conda install cudnn=10.0.130 -c conda-forge
+对应cudnn版本：7.6.5  conda install cudnn=7.6.5
+对应numpy版本：1.16.0  conda install numpy=1.16.0
+找库里有的包的版本： conda search XX
+
+指定下载地址
+conda install  XX -c conda-forge
+
+
+安装torch-本机是11.8
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+测试conda
+>>> import torch
+>>> print(torch.cuda.is_available())
+>>>print(torch.cuda.get_device_name(0))
+>>> print(torch.rand(3,3).cuda())
+
+远程服务器常用命令
+复制文件到指定目录
+scp -P 2333 wx tjutuser2@202.113.67.35:/home/tjutuser2
+密码  TJUT@lrgxy6379
+
+复制文件夹到指定目录
+scp -r -P 2333 D:\anaconda_backup\envs\SCRD tjutuser2@202.113.67.35:/home/tjutuser2/.conda/envs
+
+删除此文件下的文件
+rm -f /app/www/test/*
+
+删除此文件夹下的文件及文件夹
+rm -rf /app/www/test/*
+
+切换到用户root
+su
+切换到其他用户
+su username
+
+将服务器上的jupyter notebook映射在本机上：
+参考文章：https://blog.csdn.net/MrR1ght/article/details/98227629
+ssh -N -f -L localhost:8888:localhost:8890 -p 2333 tjutuser2@202.113.67.35
