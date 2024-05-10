@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
-int main(void)
+int main12(void)
 {
 	char* str = "wawigaojg";
 	char *str2 = strstr(str, "jgg");

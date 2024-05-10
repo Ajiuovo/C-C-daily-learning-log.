@@ -7,7 +7,7 @@
 #include <math.h>
 int m=30;		//全局变量，程序结束时才回收空间
 int* func(int a, int b);
-int main03(void)
+int main(void)
 {
 	int* p=NULL;
 	int a = 1;
@@ -19,5 +19,7 @@ int main03(void)
 
 int* func(int a, int b)
 {
+	int ret = a > b ? 1 : 2;		//指针做函数返回值，不能返回局部变量的地址。
+	//return &ret;
 	return &m;
 }
