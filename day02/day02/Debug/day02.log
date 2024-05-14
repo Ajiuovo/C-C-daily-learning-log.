@@ -1,6 +1,0 @@
-﻿  05字符串输出.c
-  06putchar.c
-D:\c++projects\day02\day02\06putchar.c(6,16): warning C4047: “函数”:“int”与“char [5]”的间接级别不同
-D:\c++projects\day02\day02\06putchar.c(6,10): warning C4024: “putchar”: 形参和实参 1 的类型不同
-  正在生成代码...
-  day02.vcxproj -> D:\c++projects\day02\Debug\day02.exe
