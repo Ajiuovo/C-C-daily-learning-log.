@@ -11,8 +11,8 @@ void test01()
 	int a = 10;
 	a = 20;
 
-	int b = 10; 
-	int* p = &b; 
+	int b = 10;
+	int* p = &b;
 	*p = 20;
 }
 
@@ -39,7 +39,7 @@ void test02()
 	printf("%s\n", p3 + 4);
 	//通过指针偏移修改age
 	char* p4 = &p;
-	*(int*)(p4+0) = 100;	//因为age是第一个元素，所以就不偏移了。
+	*(int*)(p4 + 0) = 100;	//因为age是第一个元素，所以就不偏移了。
 	printf("p4.age=%d\n", *(int*)p4);
 
 

@@ -13,7 +13,7 @@ void test01()
 {
 	int a = 10;
 	int* p = NULL;
-	p=&a;
+	p = &a;
 	printf("%d\n", *p);
 }
 //形参方式利用指针间接赋值

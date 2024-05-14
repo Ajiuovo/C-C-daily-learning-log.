@@ -88,21 +88,48 @@ void test02()
 
 
 //3、字符串翻转实现
-void reverseString(char *str)
+void reverseString01(char *str)
 {
-
+	//①：当成字符数组来实现
+	int start = 0;
+	int end = strlen(str)-1;
+	while (start<end)
+	{
+		char temp = str[start];
+		str[start] = str[end];
+		str[end] = temp;
+		start++;
+		end--;
+	}
+}
+void reverseString02(char* str)
+{
+	//②：利用字符串指针来实现
+	char* start = str;
+	char* end = str + strlen(str)-1;
+	while (start < end)
+	{
+		char temp = *start;
+		*start = *end;
+		*end = temp;
+		start++;
+		end--;
+	}
 }
 void test03()
 {
 	char str[] = "hjelllegopja";
-	reverseString(str);
+	//reverseString01(str);
+	reverseString02(str);
+	printf("%s\n", str);
 }
 
 
 
-int main(void)
+int main08(void)
 {
 	//test01();
-	test02();
+	//test02();
+	test03();
 	return EXIT_SUCCESS;
 }

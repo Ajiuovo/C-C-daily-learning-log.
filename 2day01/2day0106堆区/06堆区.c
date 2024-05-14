@@ -6,8 +6,8 @@
 #include <time.h>
 int* getSpace()
 {
-	int *p = malloc(sizeof(int) * 5);
-	if (p==NULL)
+	int* p = malloc(sizeof(int) * 5);
+	if (p == NULL)
 	{
 		perror("malloc error");
 	}
@@ -22,7 +22,7 @@ void test01()
 	int* p = getSpace();
 	for (size_t i = 0; i < 5; i++)
 	{
-		printf("%d\n",p[i]);
+		printf("%d\n", p[i]);
 	}
 	//手动开辟，手动释放
 	free(p);
@@ -30,7 +30,7 @@ void test01()
 }
 //注意事项
 
-void allocateSpace(char *pp)
+void allocateSpace(char* pp)
 {
 	char* temp = malloc(100);
 	memset(temp, 0, 100);

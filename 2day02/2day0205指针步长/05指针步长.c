@@ -11,7 +11,7 @@ void test01()
 {
 	char* p = NULL;
 	printf("%d\n", p);
-	printf("%d\n", p+1);
+	printf("%d\n", p + 1);
 
 	double* p2 = NULL;
 	printf("%d\n", p2);
@@ -23,9 +23,9 @@ void test02()
 {
 	char buf[1024] = { 0 };
 	int a = 1000;
-	memcpy(buf+1, &a, sizeof(int));
+	memcpy(buf + 1, &a, sizeof(int));
 	char* p = buf;
-	printf("%d\n", *(int*)(p+1));
+	printf("%d\n", *(int*)(p + 1));
 
 }
 //步长练习
@@ -40,7 +40,7 @@ void test03()
 {
 	struct Person p = { 'a',10,"hello",20 };
 	char* pp = &p;
-	printf("d属性的值为 %d\n", *(int *)(pp + 72));
+	printf("d属性的值为 %d\n", *(int*)(pp + 72));
 	printf("d属性的偏移量为 %d\n", offsetof(struct Person, d));
 }
 int main(void)

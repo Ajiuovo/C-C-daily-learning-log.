@@ -16,7 +16,7 @@ void test01()
 {
 	printf("%d\n", MYADD(3, 5));
 	//1、宏函数需要加小括号修饰，保证运算的完整性
-	printf("%d\n", MYADD(3, 5)*10);			//3+5*10
+	printf("%d\n", MYADD(3, 5) * 10);			//3+5*10
 	printf("%d\n", MYADD(3, 5) * 10);       //((3)+(5))*10
 }
 int main(void)

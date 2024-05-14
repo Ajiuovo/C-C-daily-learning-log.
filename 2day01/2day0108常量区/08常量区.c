@@ -27,7 +27,7 @@ void test02()
 //特点， 字符串常量不可修改
 void test03()
 {
-	char *p1="hellow";
+	char* p1 = "hellow";
 }
 int main(void)
 {

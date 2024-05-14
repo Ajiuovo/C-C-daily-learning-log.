@@ -24,7 +24,7 @@ char* getString()
 void test2()
 {
 	char* p = NULL;
-	p=getString();
+	p = getString();
 	printf("%s\n", p);		//同理，局部变量str已被释放，构造函数不能返回局部变量的值
 }
 int main(void)

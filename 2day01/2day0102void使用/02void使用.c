@@ -19,7 +19,7 @@ void test02(void)
 //void *ÕÚƒ‹÷∏’Î
 void test03()
 {
-	printf("size of void *=%d\n",sizeof(void *));
+	printf("size of void *=%d\n", sizeof(void*));
 	int* pInt = NULL;
 	char* pChar = NULL;
 	void* p = NULL;
